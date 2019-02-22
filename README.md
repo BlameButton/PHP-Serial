@@ -23,7 +23,9 @@ Example
 
 ```php
 <?php
-include 'SerialConnection.php';
+include 'vendor/autoload.php';
+
+use SerialConnection\SerialConnection;
 
 // Let's start the class
 $serial = new SerialConnection();
