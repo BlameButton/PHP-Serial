@@ -241,7 +241,7 @@
 				return false;
 			}
 
-			$int = ($int < 5) ? 5 : ($int > 8) ? 8 : $int;
+			$int = ($int < 5) ? 5 : (($int > 8) ? 8 : $int);
 			$this->_dAttr['data'] = $int;
 
 			if ($this->_stty($this->_device, $this->_dAttr, $out) !== 0) {
@@ -266,7 +266,7 @@
 				return false;
 			}
 
-			$length = ($length < 1) ? 1 : ($length > 2) ? 2 : $length;
+			$length = ($length < 1) ? 1 : (($length > 2) ? 2 : $length);
 			$this->_dAttr['stop'] = $length;
 
 			if ($this->_stty($this->_device, $this->_dAttr, $out) !== 0) {
